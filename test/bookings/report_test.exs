@@ -12,7 +12,7 @@ defmodule Flightex.Bookings.ReportTest do
       :ok
     end
 
-    test "when called, return :ok" do
+    test "when called, return the content" do
       params = %{
         complete_date: ~N[2001-05-07 12:00:00],
         local_origin: "Brasilia",
