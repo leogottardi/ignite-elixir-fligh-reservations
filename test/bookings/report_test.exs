@@ -21,7 +21,7 @@ defmodule Flightex.Bookings.ReportTest do
         id: UUID.uuid4()
       }
 
-      content = "12345678900, Brasilia, Bananeiras,2001, 5,7,12,0,0"
+      content = "12345678900, Brasilia, Bananeiras,2001-5-7 12:00:00"
 
       Flightex.create_or_update_booking(params)
       Report.generate("report-test.csv")
