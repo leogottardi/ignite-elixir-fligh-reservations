@@ -12,7 +12,7 @@ defmodule Flightex.Bookings.CreateOrUpdateTest do
 
     test "when all params are valid, returns a valid tuple" do
       params = %{
-        complete_date: [2001, 5, 7, 3, 5, 0],
+        complete_date: ~N[2001-05-07 03:05:00],
         local_origin: "Brasilia",
         local_destination: "Bananeiras",
         user_id: "12345678900",
@@ -25,7 +25,7 @@ defmodule Flightex.Bookings.CreateOrUpdateTest do
 
       expected_response = %Flightex.Bookings.Booking{
         id: response.id,
-        complete_date: [2001, 5, 7, 3, 5, 0],
+        complete_date: ~N[2001-05-07 03:05:00],
         local_destination: "Bananeiras",
         local_origin: "Brasilia",
         user_id: "12345678900"
