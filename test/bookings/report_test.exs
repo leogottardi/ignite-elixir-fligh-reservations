@@ -25,7 +25,7 @@
 
 #       Flightex.create_or_update_booking(params)
 #       Report.generate("report-test.csv")
-#       {_ok, file} = File.read("report-test.csv")
+#       {:ok, file} = File.read("report-test.csv")
 
 #       assert file =~ content
 #     end

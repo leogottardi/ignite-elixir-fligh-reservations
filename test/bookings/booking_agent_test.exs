@@ -18,7 +18,7 @@ defmodule Flightex.Bookings.AgentTest do
         |> build()
         |> BookingsAgent.save()
 
-      {_ok, uuid} = response
+      {:ok, uuid} = response
 
       assert response == {:ok, uuid}
     end

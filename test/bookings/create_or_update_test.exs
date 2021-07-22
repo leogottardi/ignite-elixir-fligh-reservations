@@ -15,20 +15,19 @@ defmodule Flightex.Bookings.CreateOrUpdateTest do
         complete_date: ~N[2001-05-07 03:05:00],
         local_origin: "Brasilia",
         local_destination: "Bananeiras",
-        user_id: "12345678900",
-        id: UUID.uuid4()
+        user_id: "e9f7d281-b9f2-467f-9b34-1b284ed58f9e",
       }
 
-      {_ok, uuid} = CreateOrUpdate.call(params)
+      {:ok, uuid} = CreateOrUpdate.call(params)
 
-      {_ok, response} = Agent.get(uuid)
+      {:ok, response} = Agent.get(uuid)
 
       expected_response = %Flightex.Bookings.Booking{
         id: response.id,
         complete_date: ~N[2001-05-07 03:05:00],
         local_destination: "Bananeiras",
         local_origin: "Brasilia",
-        user_id: "12345678900"
+        user_id: "e9f7d281-b9f2-467f-9b34-1b284ed58f9e"
       }
 
       assert response == expected_response
