@@ -21,7 +21,7 @@
 #         id: UUID.uuid4()
 #       }
 
-#       content = "12345678900, Brasilia, Bananeiras,2001-5-7 12:00:00"
+#       content = "12345678900,Brasilia,Bananeiras,2001-05-07 12:00:00"
 
 #       Flightex.create_or_update_booking(params)
 #       Report.generate("report-test.csv")
