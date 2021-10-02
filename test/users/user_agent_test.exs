@@ -22,7 +22,6 @@ defmodule Flightex.Users.AgentTest do
 
       response = UserAgent.get(cpf)
 
-
       expected_response =
         {:ok, %Flightex.Users.User{cpf: cpf, email: "jp@banana.com", id: id, name: "Jp"}}
 
