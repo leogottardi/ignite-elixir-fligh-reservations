@@ -14,7 +14,7 @@ defmodule Flightex.Users.UserTest do
           "12345678900"
         )
 
-      expected_response = build(:users, id: response.id)
+      expected_response = build(:user, id: response.id)
 
       assert response == expected_response
     end
