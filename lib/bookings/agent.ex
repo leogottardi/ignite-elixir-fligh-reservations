@@ -24,6 +24,7 @@ defmodule Flightex.Bookings.Agent do
           get_booking_between_period(booking, from_date, to_date)
         end)
       )
+      |> handle_bookings()
 
   defp get_booking_between_period(
          %Booking{complete_date: complete_date} = booking,
@@ -36,6 +37,8 @@ defmodule Flightex.Bookings.Agent do
     |> booking_date_in_period?(from_date, to_date, booking)
   end
 
+  defp to_date(naive_datetime), do: NaiveDateTime.to_date(naive_datetime)
+
   defp booking_date_in_period?(booking_date, from_date, to_date, booking) do
     period = Date.range(from_date, to_date)
 
@@ -45,7 +48,7 @@ defmodule Flightex.Bookings.Agent do
     end
   end
 
-  defp to_date(naive_datetime), do: NaiveDateTime.to_date(naive_datetime)
+  defp handle_bookings(booking_keyword_list), do: Keyword.get_values(booking_keyword_list, :ok)
 
   defp get_booking(state, uuid) do
     case Map.get(state, uuid) do
