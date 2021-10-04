@@ -4,7 +4,7 @@ defmodule Flightex.Factory do
   alias Flightex.Bookings.Booking
   alias Flightex.Users.User
 
-  def user_factory do
+  def users_factory do
     %User{
       id: UUID.uuid4(),
       name: "Jp",
