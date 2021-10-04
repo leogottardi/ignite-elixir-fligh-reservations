@@ -9,6 +9,4 @@ defmodule Flightex.Users.User do
     uuid = UUID.uuid4()
     {:ok, %__MODULE__{id: uuid, name: name, email: email, cpf: cpf}}
   end
-
-  def build(_name, _email, _cpf), do: {:error, "Invalid params"}
 end

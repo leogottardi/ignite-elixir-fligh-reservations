@@ -30,6 +30,27 @@
       "test": "test get/1 when the user is found, return a booking"
     },
     {
+      "describe": "get/1",
+      "file": "/home/gottardi/pessoal/estudos/ignite/elixir/chapter1/desafios/ignite-elixir-flight-reservations/test/users/user_agent_test.exs",
+      "line": 55,
+      "module": "Elixir.Flightex.Users.AgentTest",
+      "test": "test get/1 when the user is't founded, returns an error"
+    },
+    {
+      "describe": "save/1",
+      "file": "/home/gottardi/pessoal/estudos/ignite/elixir/chapter1/desafios/ignite-elixir-flight-reservations/test/users/user_agent_test.exs",
+      "line": 18,
+      "module": "Elixir.Flightex.Users.AgentTest",
+      "test": "test save/1 when the user is saves, returns an tuple"
+    },
+    {
+      "describe": "get/1",
+      "file": "/home/gottardi/pessoal/estudos/ignite/elixir/chapter1/desafios/ignite-elixir-flight-reservations/test/users/user_agent_test.exs",
+      "line": 42,
+      "module": "Elixir.Flightex.Users.AgentTest",
+      "test": "test get/1 when the user is found, returns the user"
+    },
+    {
       "describe": "call/1",
       "file": "/home/gottardi/pessoal/estudos/ignite/elixir/chapter1/desafios/ignite-elixir-flight-reservations/test/users/create_or_update_test.exs",
       "line": 35,
@@ -66,27 +87,6 @@
       "line": 7,
       "module": "Elixir.Flightex.Bookings.BookingTest",
       "test": "test build/4 when all params are valid, returns a booking"
-    },
-    {
-      "describe": "get/1",
-      "file": "/home/gottardi/pessoal/estudos/ignite/elixir/chapter1/desafios/ignite-elixir-flight-reservations/test/users/user_agent_test.exs",
-      "line": 55,
-      "module": "Elixir.Flightex.Users.AgentTest",
-      "test": "test get/1 when the user is't founded, returns an error"
-    },
-    {
-      "describe": "save/1",
-      "file": "/home/gottardi/pessoal/estudos/ignite/elixir/chapter1/desafios/ignite-elixir-flight-reservations/test/users/user_agent_test.exs",
-      "line": 18,
-      "module": "Elixir.Flightex.Users.AgentTest",
-      "test": "test save/1 when the user is saves, returns an tuple"
-    },
-    {
-      "describe": "get/1",
-      "file": "/home/gottardi/pessoal/estudos/ignite/elixir/chapter1/desafios/ignite-elixir-flight-reservations/test/users/user_agent_test.exs",
-      "line": 42,
-      "module": "Elixir.Flightex.Users.AgentTest",
-      "test": "test get/1 when the user is found, returns the user"
     }
   ],
   "skiped": []
