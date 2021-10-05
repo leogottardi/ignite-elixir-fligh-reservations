@@ -60,5 +60,27 @@ defmodule Flightex.Bookings.AgentTest do
 
       assert response == expected_response
     end
+
+    test "when a period of dates passes, return the reservations that are within the period." do
+      build_list(2, :booking)
+      |> Enum.each(&BookingsAgent.save/1)
+
+      response = BookingsAgent.get_between_period(~D[1999-01-01], ~D[2030-01-01])
+
+      assert [
+               %Flightex.Bookings.Booking{
+                 complete_date: ~N[2001-05-07 03:05:00],
+                 local_destination: "Bananeiras",
+                 local_origin: "Brasilia",
+                 user_id: "12345678900"
+               },
+               %Flightex.Bookings.Booking{
+                 complete_date: ~N[2001-05-07 03:05:00],
+                 local_destination: "Bananeiras",
+                 local_origin: "Brasilia",
+                 user_id: "12345678900"
+               }
+             ] = response
+    end
   end
 end
