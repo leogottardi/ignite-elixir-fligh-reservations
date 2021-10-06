@@ -16,15 +16,15 @@ defmodule Flightex.Bookings.Agent do
 
   def get(uuid), do: Agent.get(__MODULE__, &get_booking(&1, uuid))
 
-  def get_between_period(from_date, to_date),
-    do:
-      Agent.get(
-        __MODULE__,
-        &Enum.map(&1, fn {_uuid, booking} ->
-          get_booking_between_period(booking, from_date, to_date)
-        end)
-      )
-      |> handle_bookings()
+  def get_between_period(from_date, to_date) do
+    Agent.get(
+      __MODULE__,
+      &Enum.map(&1, fn {_uuid, booking} ->
+        get_booking_between_period(booking, from_date, to_date)
+      end)
+    )
+    |> handle_bookings()
+  end
 
   defp get_booking_between_period(
          %Booking{complete_date: complete_date} = booking,
