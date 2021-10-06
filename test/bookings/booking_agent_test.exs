@@ -60,6 +60,14 @@ defmodule Flightex.Bookings.AgentTest do
 
       assert response == expected_response
     end
+  end
+
+  describe "get_between_period/2" do
+    setup do
+      BookingsAgent.start_link(%{})
+
+      {:ok, id: UUID.uuid4()}
+    end
 
     test "when a period of dates passes, return the reservations that are within the period." do
       build_list(2, :booking)
