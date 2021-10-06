@@ -4,11 +4,11 @@
   "invalid": [],
   "passed": [
     {
-      "describe": "start_agents/0",
-      "file": "/home/gottardi/pessoal/estudos/ignite/elixir/chapter1/desafios/ignite-elixir-flight-reservations/test/flightex_test.exs",
-      "line": 5,
-      "module": "Elixir.FlightexTest",
-      "test": "test start_agents/0 when call, start bookings and users agents"
+      "describe": "build/4",
+      "file": "/home/gottardi/pessoal/estudos/ignite/elixir/chapter1/desafios/ignite-elixir-flight-reservations/test/bookings/booking_test.exs",
+      "line": 7,
+      "module": "Elixir.Flightex.Bookings.BookingTest",
+      "test": "test build/4 when all params are valid, returns a booking"
     },
     {
       "describe": "build/4",
@@ -25,13 +25,6 @@
       "test": "test build/4 when cpf is a integer"
     },
     {
-      "describe": "build/4",
-      "file": "/home/gottardi/pessoal/estudos/ignite/elixir/chapter1/desafios/ignite-elixir-flight-reservations/test/bookings/booking_test.exs",
-      "line": 7,
-      "module": "Elixir.Flightex.Bookings.BookingTest",
-      "test": "test build/4 when all params are valid, returns a booking"
-    },
-    {
       "describe": "call/1",
       "file": "/home/gottardi/pessoal/estudos/ignite/elixir/chapter1/desafios/ignite-elixir-flight-reservations/test/bookings/create_or_update_test.exs",
       "line": 13,
@@ -39,18 +32,25 @@
       "test": "test call/1 when all params are valid, returns a valid tuple"
     },
     {
+      "describe": "start_agents/0",
+      "file": "/home/gottardi/pessoal/estudos/ignite/elixir/chapter1/desafios/ignite-elixir-flight-reservations/test/flightex_test.exs",
+      "line": 9,
+      "module": "Elixir.FlightexTest",
+      "test": "test start_agents/0 when call, start bookings and users agents"
+    },
+    {
+      "describe": "generate_report/2",
+      "file": "/home/gottardi/pessoal/estudos/ignite/elixir/chapter1/desafios/ignite-elixir-flight-reservations/test/flightex_test.exs",
+      "line": 22,
+      "module": "Elixir.FlightexTest",
+      "test": "test generate_report/2 when period exist, create a csv with reports"
+    },
+    {
       "describe": "get/1",
       "file": "/home/gottardi/pessoal/estudos/ignite/elixir/chapter1/desafios/ignite-elixir-flight-reservations/test/users/user_agent_test.exs",
       "line": 42,
       "module": "Elixir.Flightex.Users.AgentTest",
       "test": "test get/1 when the user is found, returns the user"
-    },
-    {
-      "describe": "save/1",
-      "file": "/home/gottardi/pessoal/estudos/ignite/elixir/chapter1/desafios/ignite-elixir-flight-reservations/test/users/user_agent_test.exs",
-      "line": 18,
-      "module": "Elixir.Flightex.Users.AgentTest",
-      "test": "test save/1 when the user is saves, returns an tuple"
     },
     {
       "describe": "get/1",
@@ -61,10 +61,10 @@
     },
     {
       "describe": "save/1",
-      "file": "/home/gottardi/pessoal/estudos/ignite/elixir/chapter1/desafios/ignite-elixir-flight-reservations/test/bookings/booking_agent_test.exs",
-      "line": 15,
-      "module": "Elixir.Flightex.Bookings.AgentTest",
-      "test": "test save/1 when the param are valid, return a booking uuid"
+      "file": "/home/gottardi/pessoal/estudos/ignite/elixir/chapter1/desafios/ignite-elixir-flight-reservations/test/users/user_agent_test.exs",
+      "line": 18,
+      "module": "Elixir.Flightex.Users.AgentTest",
+      "test": "test save/1 when the user is saves, returns an tuple"
     },
     {
       "describe": "get/1",
@@ -74,11 +74,11 @@
       "test": "test get/1 when the user wasn't found, returns an error"
     },
     {
-      "describe": "get/1",
+      "describe": "save/1",
       "file": "/home/gottardi/pessoal/estudos/ignite/elixir/chapter1/desafios/ignite-elixir-flight-reservations/test/bookings/booking_agent_test.exs",
-      "line": 34,
+      "line": 15,
       "module": "Elixir.Flightex.Bookings.AgentTest",
-      "test": "test get/1 when the user is found, return a booking"
+      "test": "test save/1 when the param are valid, return a booking uuid"
     },
     {
       "describe": "get_between_period/2",
@@ -86,6 +86,13 @@
       "line": 72,
       "module": "Elixir.Flightex.Bookings.AgentTest",
       "test": "test get_between_period/2 when a period of dates passes, return the reservations that are within the period."
+    },
+    {
+      "describe": "get/1",
+      "file": "/home/gottardi/pessoal/estudos/ignite/elixir/chapter1/desafios/ignite-elixir-flight-reservations/test/bookings/booking_agent_test.exs",
+      "line": 34,
+      "module": "Elixir.Flightex.Bookings.AgentTest",
+      "test": "test get/1 when the user is found, return a booking"
     },
     {
       "describe": "call/1",
